@@ -1,4 +1,4 @@
-# Objectif du Tp : faire communiquer deux applications qui existent dans des differents reseaux à travers un reseau gateway
+# Objectif du Tp : faire communiquer deux applications qui existent dans des differents reseaux en passant par un reseau gateway
 ### Création des reséaux ynov-frontend-network et ynov-backend-network
   ##### docker network create --subnet=10.0.0.0/24 ynov-frontend-network
   ##### docker network create --subnet=10.0.1.0/24 ynov-backend-network
@@ -23,4 +23,11 @@ l'option privileged ici nous permet d'avoir tous les droits sur le container afi
   #### docker network inspect ynov-frontend-network
   #### docker network inspect ynov-backend-network
 une fois cela fait on 'a la possibilité de voir les adresses ip des containers et on peut se connecter sur le containers prestashop-ynov pour pinguer mariadb sans soucis.
-  
+
+#### docker exec -it prestashop ping 10.0.0.3
+
+et  
+
+#### docker exec -it prestashop ping 10.0.1.3
+
+                                                                      Tout marche nickel !!!!! 
